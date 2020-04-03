@@ -19,26 +19,36 @@ namespace Dice_Poker
 
         private void ThrowButton_Click(object sender, EventArgs e)
         {
+            Combination Player1Combination;
+            Combination Player2Combination;
             if (whoseTurn % 2 != 0)
             {
                 GenerateDicePics(groupBoxPL1);
+                
                 mainHintLabel.Text = "Игрок 1, выберите комбинацию, которая у вас выпала!";
                 whoseTurn++;
                 switch(combinationBox.SelectedItem)
                 {
                     case "Покер":
+                        Player1Combination = new Combination(8, "Покер");
                         break;
                     case "Карэ":
+                        Player1Combination = new Combination(7, "Карэ");
                         break;
                     case "Фулл Хаус":
+                        Player1Combination = new Combination(6, "Фулл Хаус");
                         break;
                     case "Большой стрит":
+                        Player1Combination = new Combination(5, "Большой стрит");
                         break;
                     case "Малый стрит":
+                        Player1Combination = new Combination(4, "Малый стрит");
                         break;
                     case "Сет":
+                        Player1Combination = new Combination(3, "Сет");
                         break;
                     case "Пара":
+                        Player1Combination = new Combination(2, "Пара");
                         break;
                 }
             }
@@ -47,6 +57,30 @@ namespace Dice_Poker
                 GenerateDicePics(groupBoxPL2);
                 mainHintLabel.Text = "Игрок 2, выберите комбинацию, которая у вас выпала!";
                 whoseTurn++;
+                switch (combinationBox.SelectedItem)
+                {
+                    case "Покер":
+                        Player2Combination = new Combination(8, "Покер");
+                        break;
+                    case "Карэ":
+                        Player2Combination = new Combination(7, "Карэ");
+                        break;
+                    case "Фулл Хаус":
+                        Player2Combination = new Combination(6, "Фулл Хаус");
+                        break;
+                    case "Большой стрит":
+                        Player2Combination = new Combination(5, "Большой стрит");
+                        break;
+                    case "Малый стрит":
+                        Player2Combination = new Combination(4, "Малый стрит");
+                        break;
+                    case "Сет":
+                        Player2Combination = new Combination(3, "Сет");
+                        break;
+                    case "Пара":
+                        Player2Combination = new Combination(2, "Пара");
+                        break;
+                }
             }
         }
 

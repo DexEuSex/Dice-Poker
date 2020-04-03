@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dice_Poker
+namespace Dice_Poker.Combinations
 {
-    public class Kare : Combination
+    public class BattleOfCombinations<A, B> 
+        where A: Combination
+        where B: Combination
     {
-        public new int Strength = 7;
 
     }
 }

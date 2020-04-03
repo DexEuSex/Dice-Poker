@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dice_Poker
+namespace Dice_Poker.GamePlay
 {
-    class Pair
+    class Second_Player
     {
-
     }
 }

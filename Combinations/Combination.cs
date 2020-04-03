@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace Dice_Poker
 {
-    public abstract class Combination
+    public class Combination
     {
-        public int Strength;
+        public int Strength { get; set; }
+        public string CombinationName { get; set; }
+
+        public Combination(int strengthOfCombination, string combinationName)
+        {
+            Strength = strengthOfCombination;
+            CombinationName = combinationName;
+        }
+
     }
 }
