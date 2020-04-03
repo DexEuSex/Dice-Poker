@@ -11,5 +11,17 @@ namespace Dice_Poker.Combinations
         where B: Combination
     {
 
+        public int StartBattle(A Player1Combination, B Player2Combination)
+        {
+            int winner = 0;
+
+            if (Player1Combination.Strength > Player2Combination.Strength)
+            {
+                winner = 1;
+            }
+            else winner = 2;
+
+            return winner;
+        }
     }
 }
