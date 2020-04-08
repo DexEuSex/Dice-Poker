@@ -10,19 +10,17 @@ namespace Dice_Poker
     {
         int[] pl1Val = {0,0,0,0,0};
         int whoseTurn = 1;
+        Combination Player2Combination;
+        Combination Player1Combination;
         public Form1()
         {
             InitializeComponent();
             player1Hint.Visible = false;
             player2Hint.Visible = false;
-            FirstPlayer player1 = new FirstPlayer(100);
-            SecondPlayer player2 = new SecondPlayer(100);
         }
 
         private void ThrowButton_Click(object sender, EventArgs e)
         {
-            Combination Player1Combination;
-            Combination Player2Combination;
             if (whoseTurn % 2 != 0)
             {
                 GenerateDicePics(groupBoxPL1);
@@ -85,7 +83,17 @@ namespace Dice_Poker
                 }
             }
         }
-
+        private void ApproveButton_Click(object sender, EventArgs e)
+        {
+            if (whoseTurn % 2 != 0)
+            {
+                Player FirstPlayer = new Player(Player1Combination);
+            }
+            else
+            {
+                Player SecondPlayer = new Player(Player2Combination);
+            }
+        }
 
         async public void GenerateDicePics(GroupBox playersGroupBox)
         {
@@ -168,6 +176,8 @@ namespace Dice_Poker
 
             return mainHintLabel.Text;
         }
+
+        
     }
 
 }

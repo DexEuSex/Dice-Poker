@@ -45,7 +45,7 @@
             this.combinationBox = new System.Windows.Forms.ComboBox();
             this.player1Hint = new System.Windows.Forms.Label();
             this.player2Hint = new System.Windows.Forms.Label();
-            this.switchTurnButton = new System.Windows.Forms.Button();
+            this.ApproveButton = new System.Windows.Forms.Button();
             this.groupBoxPL2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pl2Pic1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pl2Pic2)).BeginInit();
@@ -222,21 +222,22 @@
             this.player2Hint.TabIndex = 6;
             this.player2Hint.Text = "Подсказка игрока 2";
             // 
-            // switchTurnButton
+            // ApproveButton
             // 
-            this.switchTurnButton.Location = new System.Drawing.Point(482, 221);
-            this.switchTurnButton.Name = "switchTurnButton";
-            this.switchTurnButton.Size = new System.Drawing.Size(250, 46);
-            this.switchTurnButton.TabIndex = 7;
-            this.switchTurnButton.Text = "Передать ход";
-            this.switchTurnButton.UseVisualStyleBackColor = true;
+            this.ApproveButton.Location = new System.Drawing.Point(482, 221);
+            this.ApproveButton.Name = "ApproveButton";
+            this.ApproveButton.Size = new System.Drawing.Size(250, 46);
+            this.ApproveButton.TabIndex = 7;
+            this.ApproveButton.Text = "Подтвердить комбинацию";
+            this.ApproveButton.UseVisualStyleBackColor = true;
+            this.ApproveButton.Click += new System.EventHandler(this.approveButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(898, 528);
-            this.Controls.Add(this.switchTurnButton);
+            this.Controls.Add(this.ApproveButton);
             this.Controls.Add(this.player2Hint);
             this.Controls.Add(this.player1Hint);
             this.Controls.Add(this.combinationBox);
@@ -282,7 +283,7 @@
         private System.Windows.Forms.ComboBox combinationBox;
         private System.Windows.Forms.Label player1Hint;
         private System.Windows.Forms.Label player2Hint;
-        private System.Windows.Forms.Button switchTurnButton;
+        private System.Windows.Forms.Button ApproveButton;
     }
 }
 
