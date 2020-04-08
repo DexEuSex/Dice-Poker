@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Dice_Poker.GamePlay;
 namespace Dice_Poker
 {
     public partial class Form1 : Form
@@ -15,6 +15,8 @@ namespace Dice_Poker
             InitializeComponent();
             player1Hint.Visible = false;
             player2Hint.Visible = false;
+            FirstPlayer player1 = new FirstPlayer(100);
+            SecondPlayer player2 = new SecondPlayer(100);
         }
 
         private void ThrowButton_Click(object sender, EventArgs e)

@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Dice_Poker.GamePlay
 {
-    class Second_Player
+    class SecondPlayer
     {
+        public int CoinsAmount { get; set; }
+
+        public SecondPlayer(int coins)
+        {
+            CoinsAmount = coins;
+        }
     }
 }
